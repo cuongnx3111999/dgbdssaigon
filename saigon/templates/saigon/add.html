@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .top{
+        margin-top:100px
+        }
+        h1{
+        margin-bottom:100px
+        }
+    </style>
+    }
+</style>
+</head>
+<body>
+
+<div class="top"> </div>
+<div class="container">
+    <h1>ĐỊNH GIÁ BẤT ĐỘNG SẢN KHU VỰC TP HCM</h1>
+    <form action="{% url 'saigon:predict' %}" method="post">
+    {% csrf_token %}
+    <p><span class="col-ms-6"> Diện tích: </span><span class="col-ms-6"><input type="number" name="dientich" id="dientich" class="form-control" placeholder="Lớn hơn 15m² và nhỏ hơn 300m²"></span></p>
+
+    <p><lable for="sotang">Số tầng</lable>
+    <select name="sotang" id="sotang" class="custom-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+</p>
+    <p><lable for="sophongngu">Số phòng ngủ</lable>
+    <select name="sophongngu" id="sophongngu" class="custom-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select></p>
+    <p><lable for="sotoilet">Số toilet</lable>
+    <select name="sotoilet" id="sotoilet" class="custom-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select></p>
+    <p><lable for="noithat">Nội thất</lable>
+    <select name="noithat" id="noithat" class="custom-select">
+        <option value="1">Có</option>
+        <option value="0">Không</option>
+    </select></p>
+    <p><lable for="loai">Loại</lable>
+    <select name="loai" id="loai" class="custom-select">
+        <option value="1">Nhà riêng</option>
+        <option value="0">Chung cư</option>
+    </select></p>
+
+    <p>  <input type="submit" value="đánh giá"></p>
+</form>
+</div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
